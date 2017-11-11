@@ -1,0 +1,15 @@
+[push]
+    default = simple
+    followTags = true
+
+[alias]
+    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+
+[user]
+    name = thomas
+    email = thomas.treffry@nearform.com
+
+[credential "https://github.com/"]
+    username = lpww
+    helper = store
+
