@@ -1,7 +1,10 @@
-#compinstall
+#enable completion
 zstyle :compinstall filename '/home/thomas/.zshrc'
 autoload -Uz compinit
 compinit
+
+#prompt
+export PS1="%B%C %%%b "
 
 #autocd
 setopt autocd
