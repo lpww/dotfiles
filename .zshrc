@@ -4,7 +4,7 @@ autoload -Uz compinit
 compinit
 
 #autocd
-setopt autoc
+setopt autocd
 
 #beep on error
 setopt beep
