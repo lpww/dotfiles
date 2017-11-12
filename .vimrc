@@ -106,6 +106,9 @@ endfunction
 " remove white space
 nnoremap <F5> :call Preserve("%s/\\s\\+$//e")<CR>
 
+" escape with ;;
+:imap ;; <Esc>
+
 " auto indent new lines
 set autoindent
 set smartindent
