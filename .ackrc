@@ -1,0 +1,5 @@
+--pager=less -RFX
+--ignore-dir=node_modules
+--smart-case
+--type-add=jsx=.jsx
+
