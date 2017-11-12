@@ -14,6 +14,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'AlessandroYorba/Despacio'
 Plugin 'sickill/vim-pasta'
 Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-repeat'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
