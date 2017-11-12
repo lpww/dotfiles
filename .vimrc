@@ -1,5 +1,7 @@
 " vim config
 
+" Cancel the compatibility with Vi. Essential if you want
+" to enjoy the features of Vim
 set nocompatible
 filetype off
 
@@ -16,12 +18,8 @@ Plugin 'sickill/vim-pasta'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-repeat'
 
-" All of your Plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on
-
-" Cancel the compatibility with Vi. Essential if you want
-" to enjoy the features of Vim
 
 " -- Display
 set title                 " Update the title of your window or your terminal
