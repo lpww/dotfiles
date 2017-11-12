@@ -1,15 +1,18 @@
 [push]
-    default = simple
-    followTags = true
+	default = simple
+	followTags = true
+
+[rebase]
+	autostash = true
 
 [alias]
-    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 
 [user]
-    name = thomas
-    email = thomas.treffry@nearform.com
+	name = thomas
+	email = thomas.treffry@nearform.com
 
 [credential "https://github.com/"]
-    username = lpww
-    helper = store
+	username = lpww
+	helper = store
 
