@@ -17,6 +17,8 @@ Plugin 'AlessandroYorba/Despacio'
 Plugin 'sickill/vim-pasta'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'w0rp/ale'
 
 call vundle#end()
 filetype plugin indent on
