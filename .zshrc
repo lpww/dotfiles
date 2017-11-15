@@ -84,8 +84,16 @@ alias dcp='docker container prune'
 alias dsp='docker system prune'
 alias dvp='docker volume prune'
 
-#drive-google
+#drive-google aliases
 alias drive='drive-google'
+
+#backlight aliases
+alias screen-off='sleep 1 && xset dpms force off'
+
+#navigation shortcuts
+alias wave='~/Documents/nearform/wave2'
+alias dotfiles='~/Documents/dotfiles'
+alias projects='~/Documents/projects'
 
 #weather
 function wttr(){
@@ -96,6 +104,8 @@ function wttr(){
 #initialize nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+PATH=$PATH:/usr/local/bin
 
 #The bin in the home directory should take priority
 PATH=$HOME/bin:$PATH
