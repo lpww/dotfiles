@@ -115,6 +115,8 @@ set smartindent
 set softtabstop=2
 set shiftwidth=2
 set tabstop=2
+set expandtab
+set smarttab
 
 " enable jsx syntax highlighting
 let g:jsx_ext_required = 0
