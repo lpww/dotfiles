@@ -46,6 +46,9 @@ setopt MULTIOS
 #spell check commands
 setopt CORRECT
 
+#zsh bindings
+bindkey '^R' history-incremental-search-backward
+
 #subl aliases
 alias subl="subl3"
 
