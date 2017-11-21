@@ -38,6 +38,7 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'w0rp/ale'
 Plugin 'janko-m/vim-test'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'tpope/vim-surround'
 
 call vundle#end()
 
