@@ -164,6 +164,11 @@ set path+=**
 " display all matching files when we tab complete
 set wildmenu
 
+" ignore these globs when searching
+set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.ico
+set wildignore+=*.pdf,*.psd
+set wildignore+=node_modules/*
+
 " switch between the last two files
 nnoremap <Leader><Leader> <c-^>
 
