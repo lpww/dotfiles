@@ -197,10 +197,10 @@ imap kj <Esc>
 vmap kj <Esc>
 
 " vv to generate new vertical split
-nnoremap <silent> vv <C-w>v
+nnoremap <silent> <Leader>v <C-w>v
 
 " hh to generate new horizontal split
-nnoremap <silent> hh <C-w>s
+nnoremap <silent> <Leader>h <C-w>s
 
 " make Y behave like other capitals
 map Y y$
