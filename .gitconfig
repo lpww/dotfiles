@@ -14,5 +14,5 @@
 
 [credential "https://github.com/"]
 	username = lpww
-	helper = store
+	helper = /usr/lib/git-core/git-credential-libsecret
 
