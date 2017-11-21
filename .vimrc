@@ -12,6 +12,7 @@ set backspace=indent,eol,start " backspace behaves as expected
 set hidden " hide buffers when switching between them
 set directory^=$HOME/.vim/tmp// " set swap dir
 set encoding=utf-8 "set the encoding
+set clipboard=unnamedplus "use system clipboard
 
 " switch syntax highlighting on, when the terminal has colors
 " also switch on highlighting the last used search pattern.
