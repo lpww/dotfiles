@@ -81,9 +81,6 @@ alias dcp='docker container prune'
 alias dsp='docker system prune'
 alias dvp='docker volume prune'
 
-#drive-google aliases
-alias drive='drive-google'
-
 #backlight aliases
 alias screen-off='sleep 1 && xset dpms force off'
 
