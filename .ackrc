@@ -3,3 +3,11 @@
 --smart-case
 --type-add=jsx=.jsx
 
+# move to ignore nested directory for ack3 
+# https://github.com/beyondgrep/ack3/issues/43
+--ignore-dir=.happypack
+--ignore-dir=tmp
+--ignore-dir=dist
+--ignore-dir=dll
+--ignore-dir=coverage
+--ignore-file=match:statistics.html
