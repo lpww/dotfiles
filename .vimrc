@@ -20,30 +20,27 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
 endif
 
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 set nocompatible " disable vi compatability
-filetype off " disable while vundle loads
 
-" init vundle
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" vundle packages
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'mxw/vim-jsx'
-Plugin 'pangloss/vim-javascript'
-Plugin 'AlessandroYorba/Despacio'
-Plugin 'sickill/vim-pasta'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'w0rp/ale'
-Plugin 'janko-m/vim-test'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'tpope/vim-surround'
-
-call vundle#end()
-
-filetype plugin indent on
+call plug#begin('~/.vim/bundle')
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+Plug 'AlessandroYorba/Despacio'
+Plug 'sickill/vim-pasta'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-unimpaired'
+Plug 'w0rp/ale'
+Plug 'janko-m/vim-test'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'tpope/vim-surround'
+call plug#end()
 
 augroup vimrcEx
   autocmd!
