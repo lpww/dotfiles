@@ -87,7 +87,6 @@ alias bed='screen-off && node ~/Documents/projects/mp3-speaker/index.js'
 
 #navigation shortcuts
 alias wave='~/Documents/nearform/wave2'
-alias dotfiles='~/Documents/dotfiles'
 alias projects='~/Documents/projects'
 
 #weather
