@@ -13,6 +13,8 @@ set hidden " hide buffers when switching between them
 set directory^=$HOME/.vim/tmp// " set swap dir
 set encoding=utf-8 "set the encoding
 set clipboard=unnamedplus "use system clipboard
+set nowrap " no word wrap
+  autocmd FileType markdown setlocal wrap " except on markdown
 
 " switch syntax highlighting on, when the terminal has colors
 " also switch on highlighting the last used search pattern.
@@ -40,6 +42,8 @@ Plug 'w0rp/ale'
 Plug 'janko-m/vim-test'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-surround'
+Plug 'airblade/vim-gitgutter'
+Plug 'ctrlpvim/ctrlp.vim', { 'on': 'CtrlP' }
 call plug#end()
 
 augroup vimrcEx
@@ -139,7 +143,12 @@ function! Preserve(command)
 endfunction
 
 " remove white space
-nnoremap <F5> :call Preserve("%s/\\s\\+$//e")<CR>
+nnoremap <Leader>ws :call Preserve("%s/\\s\\+$//e")<CR>
+
+" ctrlp
+nnoremap <Leader>p :CtrlP<CR>
+" skip gitignored files and folders
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 " tab completion
 " will insert tab at beginning of line,
@@ -171,10 +180,15 @@ set wildignore+=node_modules/*
 nnoremap <Leader><Leader> <c-^>
 
 " get off my lawn
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
+nnoremap <Left> :vertical resize -1<CR>
+nnoremap <Right> :vertical resize +1<CR>
+nnoremap <Up> :resize -1<CR>
+nnoremap <Down> :resize +1<CR>
+" Disable arrow keys completely in Insert Mode
+imap <Up> <nop>
+imap <Down> <nop>
+imap <Left> <nop>
+imap <Right> <nop>
 
 " vim-test mappings
 nnoremap <silent> <Leader>t :TestFile<CR>
