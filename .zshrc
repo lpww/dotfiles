@@ -9,8 +9,9 @@ export PS1="%B%C %%%b "
 #autocd
 setopt autocd
 
-#beep on error
-setopt beep
+#enable colors
+autoload colors zsh/terminfo
+colors
 
 #globs
 setopt GLOB_COMPLETE
@@ -95,9 +96,22 @@ function wttr(){
   curl 'http://wttr.in/\~'$LOCATION
 }
 
+#initialize antigen
+if [[ ! -f ~/.antigen.zsh ]]; then
+  curl https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh > ~/.antigen.zsh
+fi
+source ~/.antigen.zsh
+
+#plugins
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
+
 #initialize nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+#initialize tmux
+if [ "$TMUX" = "" ]; then tmux; fi
 
 PATH=$PATH:/usr/local/bin
 
