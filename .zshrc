@@ -83,6 +83,7 @@ alias dvp='docker volume prune'
 
 #backlight aliases
 alias screen-off='sleep 1 && xset dpms force off'
+alias bed='screen-off && node ~/Documents/projects/mp3-speaker/index.js'
 
 #navigation shortcuts
 alias wave='~/Documents/nearform/wave2'
