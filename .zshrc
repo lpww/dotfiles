@@ -84,7 +84,7 @@ alias dvp='docker volume prune'
 
 #backlight aliases
 alias screen-off='sleep 1 && xset dpms force off'
-alias bed='screen-off && node ~/Documents/projects/mp3-speaker/index.js && amixer sset 'Master' 40%'
+alias bed='screen-off && node ~/Documents/projects/mp3-speaker/index.js && amixer sset 'Master' 30%'
 
 #navigation shortcuts
 alias wave='~/Documents/nearform/wave2'
