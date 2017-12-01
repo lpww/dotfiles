@@ -60,12 +60,14 @@ alias gx='gitx --all'
 alias gl='git log'
 alias gr='git reflog'
 alias gf='git fetch'
+alias gh='git show'
+alias glch='git log -n 1 --pretty=format:"%H"' #last commit hash
 #cleanup local branches fully merged into master
 alias gcl="git branch --merged master | grep -v '^\*\|  master' | xargs -n 1 git branch -d"
 
 #npm aliases
-alias ni='rm package-lock.json; npm i; rm package-lock.json'
-alias nre='rm -rf node_modules && ni'
+alias ni='npm install'
+alias nre='rm -rf node_modules && npm install'
 alias nt='npm test'
 alias nr='npm run'
 alias nv='npm version'
@@ -84,11 +86,13 @@ alias dvp='docker volume prune'
 
 #backlight aliases
 alias screen-off='sleep 1 && xset dpms force off'
-alias bed='screen-off && node ~/Documents/projects/mp3-speaker/index.js && amixer sset 'Master' 30%'
+alias bed='screen-off && node ~/code/mp3-speaker/index.js && amixer sset 'Master' 25%'
 
-#navigation shortcuts
-alias wave='~/Documents/nearform/wave2'
-alias projects='~/Documents/projects'
+#PIA aliases
+alias gerpia='sudo openvpn --config /etc/openvpn/client/Germany.conf'
+alias frpia='sudo openvpn --config /etc/openvpn/client/France.conf'
+alias enpia='sudo openvpn --config /etc/openvpn/client/UK_London.conf'
+alias uspia='sudo openvpn --config /etc/openvpn/client/US_East.conf'
 
 #weather
 function wttr(){
