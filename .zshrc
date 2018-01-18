@@ -64,6 +64,7 @@ alias gh='git show'
 alias glch='git log -n 1 --pretty=format:"%H"' #last commit hash
 #cleanup local branches fully merged into master
 alias gcl="git branch --merged master | grep -v '^\*\|  master' | xargs -n 1 git branch -d"
+alias gcb='git rev-parse --abbrev-ref HEAD' #current branch
 
 #npm aliases
 alias ni='npm install'
@@ -78,6 +79,16 @@ alias nu='npm update'
 alias ns='npm start'
 #list globally installed packages
 alias ng='npm list -g --depth=apply'
+
+#patching aliases
+function newb(){
+  BRANCH=${1}
+  git branch $BRANCH && git checkout $BRANCH && git push --set-upstream origin $BRANCH
+}
+function newf(){
+  BRANCH=`gcb`
+  git checkout -b $BRANCH'-changes'
+}
 
 #docker aliases
 alias dcp='docker container prune'
@@ -117,9 +128,14 @@ export NVM_DIR="$HOME/.nvm"
 #initialize tmux
 if [ "$TMUX" = "" ]; then tmux; fi
 
+#local bin
 PATH=$PATH:/usr/local/bin
 
-#The bin in the home directory should take priority
+#ruby
+export GEM_HOME=$HOME/.gem
+PATH=$PATH:$(ruby -rubygems -e "puts Gem.user_dir")/bin
+
+#the bin in the home directory should take priority
 PATH=$HOME/bin:$PATH
 export PATH
 
