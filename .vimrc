@@ -12,7 +12,6 @@ set backspace=indent,eol,start " backspace behaves as expected
 set hidden " hide buffers when switching between them
 set directory^=$HOME/.vim/tmp// " set swap dir
 set encoding=utf-8 "set the encoding
-set clipboard=unnamedplus "use system clipboard
 set nowrap " no word wrap
   autocmd FileType markdown setlocal wrap " except on markdown
 
@@ -44,6 +43,8 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim', { 'on': 'CtrlP' }
+Plug 'vim-scripts/ReplaceWithRegister'
+Plug 'christoomey/vim-system-copy'
 call plug#end()
 
 augroup vimrcEx
@@ -101,6 +102,7 @@ set number
 set numberwidth=5
 
 " use hybrid line numbers in normal mode and absolute in insert mode
+:set number relativenumber
 augroup numbertoggle
   autocmd!
   autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
