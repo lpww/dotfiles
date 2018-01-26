@@ -216,11 +216,20 @@ noremap Q !!$SHELL<CR>
 imap kj <Esc>
 vmap kj <Esc>
 
-" vv to generate new vertical split
+" leader+v to generate new vertical split
 nnoremap <silent> <Leader>v <C-w>v
 
-" hh to generate new horizontal split
+" leader+h to generate new horizontal split
 nnoremap <silent> <Leader>h <C-w>s
+
+" leader+l to log the current word on the line below
+nnoremap <silent> <Leader>l yiwoconsole.log('<Esc>pA', <Esc>pA);<Esc>
+
+" leader+t+i to add empty it test
+nnoremap <silent> <Leader>ti oit('', () => {<Return><Return>});<Esc>
+
+" leader+t+d to add empty describe test
+nnoremap <silent> <Leader>td odescribe('', () => {<Return><Return>});<Esc>
 
 " make Y behave like other capitals
 map Y y$
