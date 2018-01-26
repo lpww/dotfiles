@@ -226,10 +226,10 @@ nnoremap <silent> <Leader>h <C-w>s
 nnoremap <silent> <Leader>l yiwoconsole.log('<Esc>pA', <Esc>pA);<Esc>
 
 " leader+t+i to add empty it test
-nnoremap <silent> <Leader>ti oit('', () => {<Return><Return>});<Esc>
+nnoremap <silent> <Leader>ti oit('', () => {<Return><Return>});<Esc>2kO<Esc>jf'ci'
 
 " leader+t+d to add empty describe test
-nnoremap <silent> <Leader>td odescribe('', () => {<Return><Return>});<Esc>
+nnoremap <silent> <Leader>td odescribe('', () => {<Return>});<Esc>kO<Esc>jf'ci'
 
 " make Y behave like other capitals
 map Y y$
