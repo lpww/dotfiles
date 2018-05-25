@@ -128,6 +128,9 @@ export NVM_DIR="$HOME/.nvm"
 #initialize tmux
 if [ "$TMUX" = "" ]; then tmux; fi
 
+#set wave root
+export WAVE_ROOT=~/code/wave
+
 #local bin
 PATH=$PATH:/usr/local/bin
 
