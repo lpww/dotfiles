@@ -231,6 +231,9 @@ nnoremap <silent> <Leader>ti oit('', () => {<Return><Return>});<Esc>2kO<Esc>jf'c
 " leader+t+d to add empty describe test
 nnoremap <silent> <Leader>td odescribe('', () => {<Return>});<Esc>kO<Esc>jf'ci'
 
+" leader+t+c to add empty try catch block
+nnoremap <silent> <Leader>tc otry {<Esc>o}<Esc>ocatch (error) {<Esc>o}<Esc>
+
 " make Y behave like other capitals
 map Y y$
 
