@@ -100,10 +100,11 @@ alias screen-off='sleep 1 && xset dpms force off'
 alias bed='screen-off && node ~/code/mp3-speaker/index.js && amixer sset 'Master' 25%'
 
 #PIA aliases
-alias gerpia='sudo openvpn --config /etc/openvpn/client/Germany.conf'
-alias frpia='sudo openvpn --config /etc/openvpn/client/France.conf'
-alias enpia='sudo openvpn --config /etc/openvpn/client/UK_London.conf'
-alias uspia='sudo openvpn --config /etc/openvpn/client/US_East.conf'
+alias piager='sudo openvpn --config /etc/openvpn/client/Germany.conf'
+alias piafr='sudo openvpn --config /etc/openvpn/client/France.conf'
+alias piauk='sudo openvpn --config /etc/openvpn/client/UK_London.conf'
+alias piauseast='sudo openvpn --config /etc/openvpn/client/US_East.conf'
+alias piauswest='sudo openvpn --config /etc/openvpn/client/US_West.conf'
 
 #weather
 function wttr(){
