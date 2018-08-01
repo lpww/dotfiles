@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+# creates a new tmp branch with merged changes from the passed branch and the
+# branch you are currently on
+# to test someones changes against master, checkout the master branch and use `git-tmp tmp feature`
+
+if git branch | egrep -E '^  tmp$' > /dev/null; then
+	git branch -D tmp
+fi
+
+git checkout -b tmp
+
+if [[ $# -ne 0 ]]; then
+	BRANCH=""
+
+	if [[ $# -eq 2 ]]; then
+		BRANCH="$1/$2"
+	else
+		BRANCH="origin/$1"
+
+		if ! git branch -r | fgrep "  $BRANCH"; then
+			BRANCH="$1"
+		fi
+	fi
+
+	git merge --no-edit "$BRANCH"
+	echo "Merged branch '$BRANCH' into 'tmp'"
+fi
