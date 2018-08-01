@@ -45,7 +45,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim', { 'on': 'CtrlP' }
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'christoomey/vim-system-copy'
-Plug 'Townk/vim-autoclose'
 call plug#end()
 
 augroup vimrcEx
