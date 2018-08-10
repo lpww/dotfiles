@@ -32,6 +32,7 @@ set nocompatible " disable vi compatability
 call plug#begin('~/.vim/bundle')
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
+Plug 'rust-lang/rust.vim'
 Plug 'AlessandroYorba/Despacio'
 Plug 'sickill/vim-pasta'
 Plug 'tpope/vim-commentary'
@@ -116,7 +117,6 @@ set complete+=kspell
 set diffopt+=vertical
 
 " despacio colorscheme
-let g:despacio_Sunset = 1
 colorscheme despacio
 
 " auto indent new lines
