@@ -10,7 +10,6 @@ set visualbell " prevent Vim from beeping
 set noerrorbells " prevent Vim from beeping
 set backspace=indent,eol,start " backspace behaves as expected
 set hidden " hide buffers when switching between them
-set directory^=$HOME/.vim/tmp// " set swap dir
 set encoding=utf-8 "set the encoding
 set nowrap " no word wrap
   autocmd FileType markdown setlocal wrap " except on markdown
@@ -71,6 +70,14 @@ augroup vimrcEx
   autocmd InsertEnter * call ale#Lint()
   autocmd InsertLeave * call ale#Lint()
 augroup END
+
+" Turn Off Swap Files
+" ===================
+set noswapfile                  " Disable .swp files
+set nobackup                    " Disable ~ backup files
+set nowritebackup               " No really
+set backupdir^=$HOME/.vim/tmp// " But if you do, write it here
+set directory^=$HOME/.vim/tmp// " Or here
 
 " when the type of shell script is /bin/sh, assume a POSIX-compatible
 " shell for syntax highlighting purposes.
