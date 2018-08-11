@@ -32,7 +32,7 @@ call plug#begin('~/.vim/bundle')
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'rust-lang/rust.vim'
-Plug 'AlessandroYorba/Despacio'
+Plug 'lucy/term.vim'
 Plug 'sickill/vim-pasta'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
@@ -122,9 +122,6 @@ set complete+=kspell
 
 " always use vertical diffs
 set diffopt+=vertical
-
-" despacio colorscheme
-colorscheme despacio
 
 " auto indent new lines
 set autoindent
