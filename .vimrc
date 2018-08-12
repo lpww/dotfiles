@@ -133,6 +133,7 @@ set splitright
 
 " highlight current cursor line and column
 set cursorline
+highlight cursorline ctermbg=0 cterm=reverse
 set cursorcolumn
 
 " set the colorcolumn to dark
