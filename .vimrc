@@ -133,8 +133,9 @@ set splitright
 
 " highlight current cursor line and column
 set cursorline
-highlight cursorline ctermbg=0 cterm=reverse
+highlight cursorline cterm=NONE ctermbg=8 ctermfg=NONE
 set cursorcolumn
+highlight cursorcolumn cterm=NONE ctermbg=8 ctermfg=NONE
 
 " set the colorcolumn to dark
 highlight ColorColumn ctermbg=1
