@@ -1195,7 +1195,7 @@ c.spellcheck.languages = ["en-US"]
 
 ## Open new tabs (middleclick/ctrl+click) in the background.
 ## Type: Bool
-# c.tabs.background = False
+c.tabs.background = True
 
 ## Mouse button with which to close tabs.
 ## Type: String
