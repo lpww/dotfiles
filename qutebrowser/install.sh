@@ -9,3 +9,8 @@ _link "$src" "$dst"
 
 # install spellcheck dictionary
 /usr/share/qutebrowser/scripts/dictcli.py install en-US
+
+src="$dirname/qute.sh"
+dst="$HOME/bin/qute"
+chmod +x "$src"
+_link "$src" "$dst"
