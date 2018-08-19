@@ -822,7 +822,7 @@
 ## Default monospace fonts. Whenever "monospace" is used in a font
 ## setting, it's replaced with the fonts listed here.
 ## Type: Font
-# c.fonts.monospace = '"xos4 Terminus", Terminus, Monospace, "DejaVu Sans Mono", Monaco, "Bitstream Vera Sans Mono", "Andale Mono", "Courier New", Courier, "Liberation Mono", monospace, Fixed, Consolas, Terminal'
+c.fonts.monospace = '"DejaVu Sans Mono", "xos4 Terminus", Terminus, Monospace, Monaco, "Bitstream Vera Sans Mono", "Andale Mono", "Courier New", Courier, "Liberation Mono", monospace, Fixed, Consolas, Terminal'
 
 ## Font used for prompts.
 ## Type: Font
@@ -862,7 +862,7 @@
 
 ## Default font size (in pixels) for regular text.
 ## Type: Int
-# c.fonts.web.size.default = 16
+c.fonts.web.size.default = 17
 
 ## Default font size (in pixels) for fixed-pitch text.
 ## Type: Int
@@ -870,7 +870,7 @@
 
 ## Hard minimum font size (in pixels).
 ## Type: Int
-# c.fonts.web.size.minimum = 0
+c.fonts.web.size.minimum = 10
 
 ## Minimum logical font size (in pixels) that is applied when zooming
 ## out.
