@@ -1314,12 +1314,12 @@ c.tabs.position = 'left'
 ##   - never: Always hide the tab bar.
 ##   - multiple: Hide the tab bar if only one tab is open.
 ##   - switching: Show the tab bar when switching tabs.
-# c.tabs.show = 'always'
+c.tabs.show = 'switching'
 
 ## Duration (in milliseconds) to show the tab bar before hiding it when
 ## tabs.show is set to 'switching'.
 ## Type: Int
-# c.tabs.show_switching_delay = 800
+c.tabs.show_switching_delay = 2000
 
 ## Open a new window for every tab.
 ## Type: Bool
@@ -1355,7 +1355,7 @@ c.tabs.position = 'left'
 ## Width (in pixels or as percentage of the window) of the tab bar if
 ## it's vertical.
 ## Type: PercOrInt
-# c.tabs.width = '20%'
+c.tabs.width = 200
 
 ## Wrap when changing tabs.
 ## Type: Bool
