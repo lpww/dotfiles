@@ -1297,7 +1297,7 @@
 ##   - bottom
 ##   - left
 ##   - right
-#c.tabs.position = 'top'
+c.tabs.position = 'left'
 
 ## Which tab to select when the focused tab is removed.
 ## Type: SelectOnRemove
