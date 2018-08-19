@@ -1399,7 +1399,13 @@ c.tabs.position = 'left'
 ## used by prepending the search engine name to the search term, e.g.
 ## `:open google qutebrowser`.
 ## Type: Dict
-# c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}'}
+c.url.searchengines = {
+    'DEFAULT': 'https://duckduckgo.com/?q={}',
+    'a': 'https://wiki.archlinux.org/?search={}',
+    'y': 'https://www.youtube.com/results?search_query={}',
+    'g': 'https://github.com/search?q={}&type=Repositories',
+    'r': 'https://reddit.com/r/{}'
+}
 
 ## Page(s) to open at the start.
 ## Type: List of FuzzyUrl, or FuzzyUrl
