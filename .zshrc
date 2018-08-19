@@ -121,6 +121,7 @@ source ~/antigen.zsh
 
 #plugins
 antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-syntax-highlighting
 
 #initialize nvm
 export NVM_DIR="$HOME/.nvm"
