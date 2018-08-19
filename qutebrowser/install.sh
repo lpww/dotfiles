@@ -6,3 +6,6 @@ source "$dirname/../scripts/_shared.sh"
 src="$dirname/config.py"
 dst="$HOME/.config/qutebrowser/config.py"
 _link "$src" "$dst"
+
+# install spellcheck dictionary
+/usr/share/qutebrowser/scripts/dictcli.py install en-US
