@@ -10,4 +10,5 @@
 --ignore-dir=dist
 --ignore-dir=dll
 --ignore-dir=coverage
+--ignore-dir=test-results
 --ignore-file=match:statistics.html
