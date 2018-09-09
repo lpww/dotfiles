@@ -862,7 +862,7 @@ c.fonts.monospace = '"DejaVu Sans Mono", "xos4 Terminus", Terminus, Monospace, M
 
 ## Default font size (in pixels) for regular text.
 ## Type: Int
-c.fonts.web.size.default = 17
+c.fonts.web.size.default = 15
 
 ## Default font size (in pixels) for fixed-pitch text.
 ## Type: Int
@@ -870,7 +870,7 @@ c.fonts.web.size.default = 17
 
 ## Hard minimum font size (in pixels).
 ## Type: Int
-c.fonts.web.size.minimum = 10
+# c.fonts.web.size.minimum = 10
 
 ## Minimum logical font size (in pixels) that is applied when zooming
 ## out.
