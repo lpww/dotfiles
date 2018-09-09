@@ -1402,9 +1402,10 @@ c.tabs.width = 200
 c.url.searchengines = {
     'DEFAULT': 'https://duckduckgo.com/?q={}',
     'a': 'https://wiki.archlinux.org/?search={}',
-    'y': 'https://www.youtube.com/results?search_query={}',
     'g': 'https://github.com/search?q={}&type=Repositories',
-    'r': 'https://reddit.com/r/{}'
+    'r': 'https://reddit.com/r/{}',
+    'w': 'https://github.services.mckinseywave.com/wave2/{}',
+    'y': 'https://www.youtube.com/results?search_query={}'
 }
 
 ## Page(s) to open at the start.
