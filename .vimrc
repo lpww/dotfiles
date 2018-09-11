@@ -1,5 +1,4 @@
-" leader
-let mapleader = " "
+" leader let mapleader = " "
 
 set ruler " display cursor position
 set showcmd " display incomplete commands
@@ -38,7 +37,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-unimpaired'
 Plug 'w0rp/ale'
-Plug 'janko-m/vim-test'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
@@ -197,13 +195,6 @@ imap <Up> <nop>
 imap <Down> <nop>
 imap <Left> <nop>
 imap <Right> <nop>
-
-" vim-test mappings
-nnoremap <silent> <Leader>t :TestFile<CR>
-nnoremap <silent> <Leader>s :TestNearest<CR>
-nnoremap <silent> <Leader>l :TestLast<CR>
-nnoremap <silent> <Leader>a :TestSuite<CR>
-nnoremap <silent> <Leader>gt :TestVisit<CR>
 
 " quicker window movement
 nnoremap <C-j> <C-w>j
