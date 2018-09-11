@@ -127,9 +127,6 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
-#initialize tmux
-if [ "$TMUX" = "" ]; then tmux; fi
-
 #set wave root
 export WAVE_ROOT=~/code/wave
 
