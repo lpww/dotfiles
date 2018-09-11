@@ -214,6 +214,9 @@ noremap Q !!$SHELL<CR>
 imap kj <Esc>
 vmap kj <Esc>
 
+" control+w as save
+nnoremap <silent> <C-w> :w<cr>
+
 " leader+v to generate new vertical split
 nnoremap <silent> <Leader>v <C-w>v
 
