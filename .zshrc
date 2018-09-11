@@ -47,6 +47,9 @@ bindkey '^R' history-incremental-search-backward
 #subl aliases
 alias subl="subl3"
 
+#sudo aliases
+alias sudo='sudo -s' # keep sudo session for life of terminal window
+
 #git aliases
 alias gs='git status'
 alias ga='git add'
