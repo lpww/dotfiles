@@ -102,6 +102,10 @@ alias dvp='docker volume prune'
 alias screen-off='sleep 1 && xset dpms force off'
 alias bed='screen-off && node ~/code/mp3-speaker/index.js && amixer sset 'Master' 25%'
 
+#brightness aliases
+alias bu='brightness up'
+alias bd='brightness down'
+
 #PIA aliases
 alias piager='sudo openvpn --config /etc/openvpn/client/Germany.conf'
 alias piafr='sudo openvpn --config /etc/openvpn/client/France.conf'
