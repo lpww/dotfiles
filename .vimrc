@@ -1,4 +1,5 @@
-" leader let mapleader = " "
+" leader
+let mapleader = " "
 
 set ruler " display cursor position
 set showcmd " display incomplete commands
