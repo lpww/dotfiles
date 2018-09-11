@@ -50,6 +50,9 @@ alias subl="subl3"
 #sudo aliases
 alias sudo='sudo -s' # keep sudo session for life of terminal window
 
+#ergodox aliases
+alias ef='teensy-loader-cli -w -v -mmcu=atmega32u4 $1'
+
 #git aliases
 alias gs='git status'
 alias ga='git add'
