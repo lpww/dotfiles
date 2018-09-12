@@ -101,6 +101,15 @@ alias dcp='docker container prune'
 alias dsp='docker system prune'
 alias dvp='docker volume prune'
 
+#wave aliases
+alias wr='~/code/wave'
+alias wrr='~/code/vpn/reroute.sh ~/code/vpn/wave-reroutes'
+alias wi='wave init'
+alias wd='wave data -i clean'
+alias wu='wave update -t top -i clean'
+alias ws='ES_ENABLED=true wave start-dev'
+alias waves='sudo sysctl -w vm.max_map_count=262144'
+
 #backlight aliases
 alias screen-off='sleep 1 && xset dpms force off'
 alias bed='screen-off && node ~/code/mp3-speaker/index.js && amixer sset 'Master' 25%'
