@@ -110,6 +110,9 @@ alias wu='wave update -t top -i clean'
 alias ws='ES_ENABLED=true wave start-dev'
 alias waves='sudo sysctl -w vm.max_map_count=262144'
 
+#vim aliases
+alias v='vim'
+
 #backlight aliases
 alias screen-off='sleep 1 && xset dpms force off'
 alias bed='screen-off && node ~/code/mp3-speaker/index.js && amixer sset 'Master' 25%'
