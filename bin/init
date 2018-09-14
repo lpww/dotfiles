@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # install packages
-pacman -S zsh tmux vim ack python3
+pacman -S zsh tmux vim ack python3 feh slock dmenu xss-lock
 
 # set zsh as default shell
 chsh -s /bin/zsh
