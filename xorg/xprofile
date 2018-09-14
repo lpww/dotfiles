@@ -18,3 +18,5 @@
 # run slock on sleep
 xss-lock slock &
 
+# set background
+~/.fehbg &
