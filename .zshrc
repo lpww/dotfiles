@@ -58,6 +58,14 @@ alias pmu='sudo pacman -Syyu && sudo pacman -Sc' # pacman update then clean cach
 alias pau='pacaur -Syyu && pacaur -Sc' # pacaur update then clean cache
 alias sysu='pmu && pau' # system update and clean cache
 
+#conversion aliases
+function videotogif(){
+  INPUT=${1}
+  OUTPUT=${2}
+  ffmpeg -i $INPUT -filter_complex 'fps=10,scale=320:-1:flags=lanczos,split [o1] [o2];[o1] palettegen [p]; [o2] fifo [o3];[o3] [p] paletteuse' $OUTPUT
+}
+alias vtg='videotogif "$@"'
+
 #git aliases
 alias gs='git status'
 alias ga='git add'
