@@ -84,6 +84,10 @@ alias glch='git log -n 1 --pretty=format:"%H"' #last commit hash
 #cleanup local branches fully merged into master
 alias gcl="git branch --merged master | grep -v '^\*\|  master' | xargs -n 1 git branch -d"
 alias gcb='git rev-parse --abbrev-ref HEAD' #current branch
+function gfo(){ # fetch and checkout
+  BRANCH=${1}
+  git fetch && git checkout $BRANCH && git pull origin $BRANCH
+}
 
 #npm aliases
 alias ni='npm install'
