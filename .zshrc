@@ -54,9 +54,10 @@ alias sudo='sudo -s' # keep sudo session for life of terminal window
 alias ef='teensy-loader-cli -w -v -mmcu=atmega32u4 $1'
 
 #package aliases
-alias pmu='sudo pacman -Syyu && sudo pacman -Sc' # pacman update then clean cache
-alias pau='pacaur -Syyu && pacaur -Sc' # pacaur update then clean cache
-alias sysu='pmu && pau' # system update and clean cache
+alias pmu='sudo pacman -Syyu' # pacman update
+alias pau='pacaur -Syyu' # pacaur update
+alias pac='pacaur -Sc' # pacaur clean
+alias sysu='pmu && pau && pac' # system update and clean cache
 
 #conversion aliases
 function videotogif(){
