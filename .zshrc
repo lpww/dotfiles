@@ -59,6 +59,11 @@ alias pau='pacaur -Syyu' # pacaur update
 alias pac='pacaur -Sc' # pacaur clean
 alias sysu='pmu && pau && pac' # system update and clean cache
 
+#networkmanger aliases
+alias nml='nmcli d wifi list'
+alias nmd='nmcli c down $1'
+alias nmu='nmcli c up $1'
+
 #conversion aliases
 function videotogif(){
   INPUT=${1}
