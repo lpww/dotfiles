@@ -235,6 +235,11 @@ nnoremap <silent> <Leader>td odescribe('', () => {<Return>});<Esc>kO<Esc>jf'ci'
 " leader+t+c to add empty try catch block
 nnoremap <silent> <Leader>tc otry {<Esc>o}<Esc>ocatch (error) {<Esc>o}<Esc>
 
+" leader+o+e to enable lab only
+noremap <silent> <Leader>toe ^ea.only<Esc>^
+" leader+o+d to disable lab only
+noremap <silent> <Leader>tod :s/\.only//<Return>
+
 " make Y behave like other capitals
 map Y y$
 
