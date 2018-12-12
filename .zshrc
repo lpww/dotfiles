@@ -114,6 +114,13 @@ alias ns='npm start'
 alias ng='npm list -g --depth=apply'
 
 #patching aliases
+function wpatch(){ # only works if it's the first patch on that version
+  VERSION=${1}
+  git fetch --tags
+  git checkout shrinkwrap-$VERSION
+  newb hotfix-$VERSION
+  newf
+}
 function newb(){
   BRANCH=${1}
   git branch $BRANCH && git checkout $BRANCH && git push --set-upstream origin $BRANCH
