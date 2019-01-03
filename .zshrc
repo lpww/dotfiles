@@ -55,8 +55,8 @@ alias ef='teensy-loader-cli -w -v -mmcu=atmega32u4 $1'
 
 #package aliases
 alias pmu='sudo pacman -Syyu' # pacman update
-alias pau='pacaur -Syyu' # pacaur update
-alias pac='pacaur -Sc' # pacaur clean
+alias pau='yay -Syyu' # yay update
+alias pac='yay -Yc' # yay clean
 alias sysu='pmu && pau && pac' # system update and clean cache
 
 #networkmanger aliases
