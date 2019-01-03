@@ -135,6 +135,9 @@ alias dcp='docker container prune'
 alias dsp='docker system prune'
 alias dvp='docker volume prune'
 
+#baseui aliases
+alias br='~/code/nearform/baseui'
+
 #wave aliases
 alias wr='~/code/wave'
 alias wrr='~/code/vpn/reroute.sh ~/code/vpn/wave-reroutes'
