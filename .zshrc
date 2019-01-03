@@ -99,6 +99,11 @@ function gfo(){ # fetch and checkout
   git fetch && git checkout $BRANCH && git pull origin $BRANCH
 }
 
+#yarn aliases
+alias y='yarn'
+alias yt='yarn test'
+alias yl='yarn lint'
+
 #npm aliases
 alias ni='npm install'
 alias nre='rm -rf node_modules && npm install'
