@@ -61,6 +61,10 @@ augroup vimrcEx
   autocmd BufRead,BufNewFile *.md set filetype=markdown
   autocmd BufRead,BufNewFile .{jscs,jshint,eslint}rc set filetype=json
 
+  " Limit linters used for JavaScript
+  let g:ale_linters = {
+  \  'javascript': ['flow', 'eslint'],
+  \}
   " ale linting events
   set updatetime=1000
   let g:ale_lint_on_text_changed = 0
