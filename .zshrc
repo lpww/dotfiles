@@ -187,10 +187,6 @@ source ~/antigen.zsh
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 
-#initialize nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
 #set wave root
 export WAVE_ROOT=~/code/wave
 
@@ -199,9 +195,8 @@ PATH=$PATH:/usr/local/bin
 
 #ruby
 export GEM_HOME=$HOME/.gem
-PATH=$PATH:$(ruby -rubygems -e "puts Gem.user_dir")/bin
+PATH=$PATH:$(ruby -r rubygems -e "puts Gem.user_dir")/bin
 
 #the bin in the home directory should take priority
 PATH=$HOME/bin:$PATH
 export PATH
-
