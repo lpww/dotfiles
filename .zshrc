@@ -143,6 +143,9 @@ alias dvp='docker volume prune'
 #baseui aliases
 alias br='~/code/nearform/baseui'
 
+#react-browser-hooks aliases
+alias hr='~/code/nearform/react-browser-hooks'
+
 #wave aliases
 alias wr='~/code/wave'
 alias wrr='~/code/vpn/reroute.sh ~/code/vpn/wave-reroutes'
