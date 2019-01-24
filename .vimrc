@@ -61,9 +61,10 @@ augroup vimrcEx
   autocmd BufRead,BufNewFile *.md set filetype=markdown
   autocmd BufRead,BufNewFile .{jscs,jshint,eslint}rc set filetype=json
 
-  " Limit linters used for JavaScript
+  " Limit linters used
+  let g:ale_linters_explicit = 1 " only run linters specifically configured
   let g:ale_linters = {
-  \  'javascript': ['flow', 'eslint'],
+  \  'javascript': ['eslint'],
   \}
   " ale linting events
   set updatetime=1000
@@ -72,6 +73,14 @@ augroup vimrcEx
   autocmd CursorHoldI * call ale#Lint()
   autocmd InsertEnter * call ale#Lint()
   autocmd InsertLeave * call ale#Lint()
+
+  " Limit fixers used
+  let g:ale_fixers = {
+  \   'javascript': ['prettier'],
+  \   'css': ['prettier'],
+  \}
+  " ale fixing events
+  let g:ale_fix_on_save = 1
 augroup END
 
 " Turn Off Swap Files
