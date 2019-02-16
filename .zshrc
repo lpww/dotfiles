@@ -44,6 +44,11 @@ setopt CORRECT
 #zsh bindings
 bindkey '^R' history-incremental-search-backward
 
+#bumblebee aliases
+alias enablegpu="systemctl enable bumblebeed" # requires restart
+alias disablegpu="systemctl disable bumblebeed" # requires restart
+alias checkgpu="cat /proc/acpi/bbswitch" # no such file if service disabled, "no" if service enabled
+
 #subl aliases
 alias subl="subl3"
 
