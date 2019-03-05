@@ -234,7 +234,7 @@ nnoremap <silent> <Leader>v <C-w>v
 nnoremap <silent> <Leader>h <C-w>s
 
 " leader+l to log the current word on the line below
-nnoremap <silent> <Leader>l yiWoconsole.log('<Esc>pA', <Esc>pA);<Esc>
+nnoremap <silent> <Leader>l yiwoconsole.log('<Esc>pA', <Esc>pA);<Esc>
 
 " leader+t+i to add empty it test
 nnoremap <silent> <Leader>ti oit('', () => {<Return><Return>});<Esc>2kO<Esc>jf'ci'
