@@ -2,23 +2,26 @@
 
 # install packages
 pacman -S zsh tmux vim ack python3 feh slock dmenu xss-lock
+yay -S ripgrep
 
 # set zsh as default shell
 chsh -s /bin/zsh
 
 # backup existing 
+mv ~/.ackrc ~/.ackrc.old
+mv ~/.gitconfig ~/.gitconfig.old
+mv ~/.ripgreprc ~/.ripgreprc.old
+mv ~/.tmux ~/.tmux.old
+mv ~/.tmux.conf ~/.tmux.conf.old
 mv ~/.vim ~/.vim.old
 mv ~/.vimrc ~/.vimrc.old
 mv ~/.zshrc ~/.zshrc.old
-mv ~/.tmux ~/.tmux.old
-mv ~/.tmux.conf ~/.tmux.conf.old
-mv ~/.ackrc ~/.ackrc.old
-mv ~/.gitconfig ~/.gitconfig.old
 
 # create symlinks
+ln -s ~/dotfiles/.ripgreprc ~/.ripgreprc
+ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.zshrc ~/.zshrc
-ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 
 # copy files that cannot be symlinked
 cp ~/dotfiles/.ackrc ~/.ackrc

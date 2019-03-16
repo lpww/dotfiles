@@ -198,6 +198,9 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 #set wave root
 export WAVE_ROOT=~/code/wave
 
+#ripgrep config path
+export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
+
 #local bin
 PATH=$PATH:/usr/local/bin
 
