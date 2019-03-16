@@ -201,6 +201,9 @@ export WAVE_ROOT=~/code/wave
 #local bin
 PATH=$PATH:/usr/local/bin
 
+#go bin
+export PATH="$PATH:$HOME/go/bin"
+
 #ruby
 export GEM_HOME=$HOME/.gem
 PATH=$PATH:$(ruby -r rubygems -e "puts Gem.user_dir")/bin
