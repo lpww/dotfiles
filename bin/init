@@ -1,14 +1,13 @@
 #!/usr/bin/env bash
 
 # install packages
-pacman -S zsh tmux vim ack python3 feh slock dmenu xss-lock
+pacman -S zsh tmux vim python3 feh slock dmenu xss-lock
 yay -S ripgrep
 
 # set zsh as default shell
 chsh -s /bin/zsh
 
 # backup existing 
-mv ~/.ackrc ~/.ackrc.old
 mv ~/.gitconfig ~/.gitconfig.old
 mv ~/.ripgreprc ~/.ripgreprc.old
 mv ~/.tmux ~/.tmux.old
@@ -24,6 +23,5 @@ ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 
 # copy files that cannot be symlinked
-cp ~/dotfiles/.ackrc ~/.ackrc
 cp ~/dotfiles/.gitconfig ~/.gitconfig
 
