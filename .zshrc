@@ -70,6 +70,7 @@ alias nmd='nmcli c down $1'
 alias nmu='nmcli c up $1'
 
 #xrandr aliases
+alias xds='xrandr --output eDP1 --off && xrandr --output HDMI1 --auto --primary && xrandr --output DP2 --off' # enable single external screen
 alias xde='xrandr --output eDP1 --off && xrandr --output HDMI1 --auto --primary && xrandr --output DP2 --auto --primary --left-of HDMI1' # enable dual screen
 alias xdd='xrandr --output eDP1 --auto --primary && xrandr --output HDMI1 --off && xrandr --output DP2 --off' # disable dual screen
 
