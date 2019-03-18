@@ -205,8 +205,8 @@ export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 #local bin
 PATH=$PATH:/usr/local/bin
 
-#go bin
-export PATH="$PATH:$HOME/go/bin"
+#go
+PATH=$PATH:$(go env GOPATH)/bin
 
 #ruby
 export GEM_HOME=$HOME/.gem
