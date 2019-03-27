@@ -161,6 +161,9 @@ alias wu='wave update -t top -i clean'
 alias ws='ES_ENABLED=true wave start-dev'
 alias waves='sudo sysctl -w vm.max_map_count=262144'
 
+#datahub aliases
+alias dr='~/code/nearform/datahub'
+
 #vim aliases
 alias v='vim'
 
