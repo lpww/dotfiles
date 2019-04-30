@@ -49,6 +49,11 @@ alias enablegpu="systemctl enable bumblebeed" # requires restart
 alias disablegpu="systemctl disable bumblebeed" # requires restart
 alias checkgpu="cat /proc/acpi/bbswitch" # no such file if service disabled, "no" if service enabled
 
+#calculator aliases
+function sc(){
+  bc <<< $1
+}
+
 #subl aliases
 alias subl="subl3"
 
