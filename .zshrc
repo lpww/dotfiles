@@ -103,7 +103,7 @@ alias gf='git fetch'
 alias gh='git show'
 alias glch='git log -n 1 --pretty=format:"%H"' #last commit hash
 #cleanup local branches fully merged into master
-alias gcl="git branch --merged master | grep -v '^\*\|  master' | xargs -n 1 git branch -d"
+alias gcl="git branch --merged | egrep -v \"(^\*|master|dev)\" | xargs -n1 -r git branch -d"
 alias gcb='git rev-parse --abbrev-ref HEAD' #current branch
 function gfo(){ # fetch and checkout
   BRANCH=${1}
@@ -167,7 +167,19 @@ alias ws='ES_ENABLED=true wave start-dev'
 alias waves='sudo sysctl -w vm.max_map_count=262144'
 
 #datahub aliases
-alias dr='~/code/nearform/datahub'
+alias df='~/code/nearform/datahub/datahub-frontend'
+function dcc(){ # create a new component from an existing one
+  SOURCE_PATH=${1}
+  NEW_PATH=${2}
+  SOURCE_NAME=$(basename $SOURCE_PATH)
+  NEW_NAME=$(basename $NEW_PATH)
+  echo creating $NEW_NAME component in $NEW_PATH
+  echo based on $SOURCE_NAME component in $SOURCE_PATH
+  mkdir $NEW_PATH #create new dir
+  cp $SOURCE_PATH/**/* $NEW_PATH #copy source component to new path
+  mv $NEW_PATH/$SOURCE_NAME.js $NEW_PATH/$NEW_NAME.js #update file name
+  grep $SOURCE_NAME $NEW_PATH -lR | xargs sed -i s/$SOURCE_NAME/$NEW_NAME/g #update file contents
+}
 
 #vim aliases
 alias v='vim'
