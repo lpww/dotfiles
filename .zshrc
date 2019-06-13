@@ -117,6 +117,7 @@ alias yl='yarn lint'
 
 #npm aliases
 alias ni='npm install'
+alias nci='npm ci'
 alias nre='rm -rf node_modules && npm install'
 alias nt='npm test'
 alias nr='npm run'
