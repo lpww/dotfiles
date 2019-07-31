@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # install packages
-pacman -S zsh tmux vim python3 feh slock dmenu xss-lock
+pacman -S zsh tmux vim python3 feh slock dmenu xss-lock xmonad xmonad-contrib xmobar
 yay -S ripgrep
 
 # set zsh as default shell
@@ -14,13 +14,16 @@ mv ~/.tmux ~/.tmux.old
 mv ~/.tmux.conf ~/.tmux.conf.old
 mv ~/.vim ~/.vim.old
 mv ~/.vimrc ~/.vimrc.old
+mv ~/.xmobarrc ~/.xmobarrc.old
+mv ~/.xmonad/xmonad.hs ~/.xmonad/xmonad.hs.old
 mv ~/.zshrc ~/.zshrc.old
 
 # create symlinks
 ln -s ~/dotfiles/.ripgreprc ~/.ripgreprc
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/.vimrc ~/.vimrc
-ln -s ~/dotfiles/.zshrc ~/.zshrc
+ln -s ~/dotfiles/.xmobarrc ~/.xmobarrc
+ln -s ~/dotfiles/xmonad.hs ~/.xmonad/xmonad.hs
 
 # copy files that cannot be symlinked
 cp ~/dotfiles/.gitconfig ~/.gitconfig
