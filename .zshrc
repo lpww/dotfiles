@@ -87,6 +87,12 @@ function videotogif(){
 }
 alias vtg='videotogif "$@"'
 
+#gitmoji aliases
+alias gmc='gitmoji -c'
+alias gms='gitmoji -s'
+alias gml='gitmoji -l'
+alias gmu='gitmoji -u'
+
 #git aliases
 alias gs='git status'
 alias ga='git add'
@@ -226,6 +232,10 @@ export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 #local bin
 PATH=$PATH:/usr/local/bin
 
+#nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
 #go
 PATH=$PATH:$(go env GOPATH)/bin
 
@@ -236,3 +246,4 @@ PATH=$PATH:$(ruby -r rubygems -e "puts Gem.user_dir")/bin
 #the bin in the home directory should take priority
 PATH=$HOME/bin:$PATH
 export PATH
+
