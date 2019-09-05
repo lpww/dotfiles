@@ -191,6 +191,9 @@ function dcc(){ # create a new component from an existing one
 #vim aliases
 alias v='vim'
 
+#battery aliases
+alias bat='echo $(cat /sys/class/power_supply/BAT0/capacity)"%"'
+
 #backlight aliases
 alias screen-off='sleep 1 && xset dpms force off'
 alias bed='screen-off && node ~/code/mp3-speaker/index.js && amixer sset 'Master' 25%'
@@ -225,6 +228,9 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 
 #set wave root
 export WAVE_ROOT=~/code/wave
+
+#set datahub root
+export DATAHUB_ROOT=~/code/nearform/datahub
 
 #ripgrep config path
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
