@@ -187,6 +187,16 @@ function dcc(){ # create a new component from an existing one
   mv $NEW_PATH/$SOURCE_NAME.js $NEW_PATH/$NEW_NAME.js #update file name
   grep $SOURCE_NAME $NEW_PATH -lR | xargs sed -i s/$SOURCE_NAME/$NEW_NAME/g #update file contents
 }
+function dmc(){ # create a new component from an existing one
+  SOURCE_PATH=${1}
+  NEW_PATH=${2}
+  SOURCE_NAME=$(basename $SOURCE_PATH)
+  NEW_NAME=$(basename $NEW_PATH)
+  echo moving $SOURCE_PATH to $NEW_PATH
+  mv $SOURCE_PATH $NEW_PATH #move source component to new path
+  mv $NEW_PATH/$SOURCE_NAME.js $NEW_PATH/$NEW_NAME.js #update file name
+  grep $SOURCE_NAME $NEW_PATH -lR | xargs sed -i s/$SOURCE_NAME/$NEW_NAME/g #update file contents
+}
 
 #vim aliases
 alias v='vim'
