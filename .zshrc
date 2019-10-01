@@ -45,9 +45,9 @@ setopt CORRECT
 bindkey '^R' history-incremental-search-backward
 
 #bumblebee aliases
-alias enablegpu="systemctl enable bumblebeed" # requires restart
-alias disablegpu="systemctl disable bumblebeed" # requires restart
-alias checkgpu="cat /proc/acpi/bbswitch" # no such file if service disabled, "no" if service enabled
+alias gpuenable="systemctl enable bumblebeed" # requires restart
+alias gpudisable="systemctl disable bumblebeed" # requires restart
+alias gpustatus="cat /proc/acpi/bbswitch" # "no such file" if gpu disabled, "no" if gpu enabled
 
 #calculator aliases
 function sc(){
