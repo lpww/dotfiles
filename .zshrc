@@ -33,7 +33,6 @@ setopt HIST_EXPIRE_DUPS_FIRST
 
 #vim
 export EDITOR=vim
-bindkey -v
 
 #pipe to multiple outputs
 setopt MULTIOS
@@ -41,33 +40,18 @@ setopt MULTIOS
 #spell check commands
 setopt CORRECT
 
-#zsh bindings
-bindkey '^R' history-incremental-search-backward
-
 #bumblebee aliases
 alias gpuenable="systemctl enable bumblebeed" # requires restart
 alias gpudisable="systemctl disable bumblebeed" # requires restart
-alias gpustatus="cat /proc/acpi/bbswitch" # "no such file" if gpu disabled, "no" if gpu enabled
+alias gpustatus="cat /proc/acpi/bbswitch" # "no such file" if gpu disabled, "off" if gpu enabled
 
 #calculator aliases
 function sc(){
   bc <<< $1
 }
 
-#subl aliases
-alias subl="subl3"
-
-#sudo aliases
-alias sudo='sudo -s' # keep sudo session for life of terminal window
-
 #ergodox aliases
 alias ef='teensy-loader-cli -w -v -mmcu=atmega32u4 $1'
-
-#package aliases
-alias pmu='sudo pacman -Syyu' # pacman update
-alias pau='yay -Syyu' # yay update
-alias pac='yay -Yc' # yay clean
-alias sysu='pmu && pau && pac' # system update and clean cache
 
 #networkmanger aliases
 alias nml='nmcli d wifi list'
@@ -86,12 +70,6 @@ function videotogif(){
   ffmpeg -i $INPUT -filter_complex 'fps=10,scale=320:-1:flags=lanczos,split [o1] [o2];[o1] palettegen [p]; [o2] fifo [o3];[o3] [p] paletteuse' $OUTPUT
 }
 alias vtg='videotogif "$@"'
-
-#gitmoji aliases
-alias gmc='gitmoji -c'
-alias gms='gitmoji -s'
-alias gml='gitmoji -l'
-alias gmu='gitmoji -u'
 
 #git aliases
 alias gs='git status'
@@ -115,11 +93,6 @@ function gfo(){ # fetch and checkout
   BRANCH=${1}
   git fetch && git checkout $BRANCH && git pull origin $BRANCH
 }
-
-#yarn aliases
-alias y='yarn'
-alias yt='yarn test'
-alias yl='yarn lint'
 
 #npm aliases
 alias ni='npm install'
@@ -174,7 +147,6 @@ alias ws='ES_ENABLED=true wave start-dev'
 alias waves='sudo sysctl -w vm.max_map_count=262144'
 
 #datahub aliases
-alias df='~/code/nearform/datahub/datahub-frontend'
 function dcc(){ # create a new component from an existing one
   SOURCE_PATH=${1}
   NEW_PATH=${2}
@@ -249,11 +221,11 @@ export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 PATH=$PATH:/usr/local/bin
 
 #nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+ export NVM_DIR="$HOME/.nvm"
+ [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 #go
-PATH=$PATH:$(go env GOPATH)/bin
+# PATH=$PATH:$(go env GOPATH)/bin
 
 #ruby
 export GEM_HOME=$HOME/.gem
