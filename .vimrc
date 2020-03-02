@@ -65,7 +65,7 @@ augroup vimrcEx
   " Limit linters used
   let g:ale_linters_explicit = 1 " only run linters specifically configured
   let g:ale_linters = {
-  \  'javascript': ['eslint', 'flow'],
+  \  'javascript': ['eslint'],
   \}
   " ale linting events
   set updatetime=1000
