@@ -208,12 +208,6 @@ source ~/antigen.zsh
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 
-#set wave root
-export WAVE_ROOT=~/code/wave
-
-#set datahub root
-export DATAHUB_ROOT=~/code/nearform/datahub
-
 #ripgrep config path
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 
