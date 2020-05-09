@@ -26,25 +26,21 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-set nocompatible " disable vi compatability
-
 call plug#begin('~/.vim/bundle')
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
-Plug 'rust-lang/rust.vim'
-Plug 'lucy/term.vim'
+" Plug 'rust-lang/rust.vim'
+" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'sickill/vim-pasta'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'tpope/vim-surround'
-Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim', { 'on': 'CtrlP' }
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'christoomey/vim-system-copy'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
 augroup vimrcEx
@@ -70,10 +66,10 @@ augroup vimrcEx
   " ale linting events
   set updatetime=1000
   let g:ale_lint_on_text_changed = 0
-  autocmd CursorHold * call ale#Lint()
-  autocmd CursorHoldI * call ale#Lint()
-  autocmd InsertEnter * call ale#Lint()
-  autocmd InsertLeave * call ale#Lint()
+  autocmd CursorHold * call ale#Queue(0)
+  autocmd CursorHoldI * call ale#Queue(0)
+  autocmd InsertEnter * call ale#Queue(0)
+  autocmd InsertLeave * call ale#Queue(0)
 
   " Limit fixers used
   let g:ale_fixers = {
@@ -138,7 +134,8 @@ set diffopt+=vertical
 
 " auto indent new lines
 set autoindent
-set smartindent
+filetype plugin indent on
+" set smartindent
 
 " open new split panes to right and bottom, which feels more natural
 set splitbelow
