@@ -60,7 +60,7 @@ alias nmu='nmcli c up $1'
 
 #xrandr aliases
 alias xds='xrandr --output eDP1 --off && xrandr --output HDMI1 --auto --primary && xrandr --output DP2 --off' # enable single external screen
-alias xde='xrandr --output eDP1 --off && xrandr --output HDMI1 --auto --primary && xrandr --output DP2 --auto --primary --left-of HDMI1' # enable dual screen
+alias xde='xrandr --output eDP1 --off && xrandr --output HDMI1 --auto --primary && xrandr --output DP2 --auto  --right-of HDMI1' # enable dual screen
 alias xdd='xrandr --output eDP1 --auto --primary && xrandr --output HDMI1 --off && xrandr --output DP2 --off' # disable dual screen
 
 #conversion aliases
@@ -156,7 +156,7 @@ function dcc(){ # create a new component from an existing one
   echo based on $SOURCE_NAME component in $SOURCE_PATH
   mkdir $NEW_PATH #create new dir
   cp $SOURCE_PATH/**/* $NEW_PATH #copy source component to new path
-  mv $NEW_PATH/$SOURCE_NAME.js $NEW_PATH/$NEW_NAME.js #update file name
+  mv $NEW_PATH/$SOURCE_NAME.jsx $NEW_PATH/$NEW_NAME.jsx #update file name
   grep $SOURCE_NAME $NEW_PATH -lR | xargs sed -i s/$SOURCE_NAME/$NEW_NAME/g #update file contents
 }
 function dmc(){ # create a new component from an existing one
@@ -169,6 +169,9 @@ function dmc(){ # create a new component from an existing one
   mv $NEW_PATH/$SOURCE_NAME.js $NEW_PATH/$NEW_NAME.js #update file name
   grep $SOURCE_NAME $NEW_PATH -lR | xargs sed -i s/$SOURCE_NAME/$NEW_NAME/g #update file contents
 }
+
+#doom3 aliases
+alias d3='dhewm3 +set fs_basepath /home/thomas/.steam/root/steamapps/common/Doom\ 3'
 
 #vim aliases
 alias v='vim'
