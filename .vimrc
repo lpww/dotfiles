@@ -169,6 +169,11 @@ let g:ctrlp_use_caching = 0
 nnoremap <Leader>p :CtrlP<CR>
 " skip gitignored files and folders
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+" use ripgrep if possible
+if executable('rg')
+  set grepprg=rg\ --color=never
+  let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
+endif
 
 " tab completion
 " will insert tab at beginning of line,
@@ -195,6 +200,7 @@ set wildmenu
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.ico
 set wildignore+=*.pdf,*.psd
 set wildignore+=node_modules/*
+set wildignore+=*/.git/*,*/tmp/*,*.swp
 
 " switch between the last two files
 nnoremap <Leader><Leader> <c-^>
