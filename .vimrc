@@ -164,6 +164,8 @@ endfunction
 nnoremap <Leader>ws :call Preserve("%s/\\s\\+$//e")<CR>
 
 " ctrlp
+" disable caching
+let g:ctrlp_use_caching = 0
 nnoremap <Leader>p :CtrlP<CR>
 " skip gitignored files and folders
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
